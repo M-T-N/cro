@@ -1,6 +1,7 @@
 // Imports
 import { qs, qsa } from './utils/qs';
 import poll from './utils/poll';
+import styles from './styles/v1.scss';
 
 
 
@@ -12,6 +13,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 function init() {
 
+  
   
 }
 
