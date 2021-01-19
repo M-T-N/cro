@@ -7,6 +7,7 @@ module.exports = {
   watch: true,
   entry: {
     'v1': './src/v1.js',
+    'v2': './src/v2.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
