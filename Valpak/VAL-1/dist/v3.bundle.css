@@ -1,0 +1,2 @@
+.tin-vids{display:flex;flex-direction:column;align-items:center}.tin-vids__vidwrap{display:-ms-grid;display:grid;-ms-grid-columns:(1fr)[3];grid-template-columns:repeat(3, 1fr)}.tin-vids__vidwrap>div{display:flex;flex-direction:column;align-items:center}
+
