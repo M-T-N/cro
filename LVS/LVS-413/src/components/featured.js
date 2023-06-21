@@ -17,7 +17,7 @@ export function featured(){
   `;
 
   const stayDates = '5/29/2023 - 9/10/2023';
-  const bookBefore = '7/31/2023';
+  const bookBefore = '8/29/2023';
   const offerDetails = 'Join Grazie® Rewards for up to an additional 5% off. Must book a stay for 3 or more nights. Cancellable/Refundable.';
 
   // add text to tag detail (offer description)
