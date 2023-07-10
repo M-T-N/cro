@@ -1,5 +1,6 @@
 import { qs, qsa } from "../utils/qs";
 import { stayDateTemplate } from "./stayDateTemplate";
+//import { loadNewOffer } from "./loadNewOffer";
 
 export function offers(){
 
@@ -25,19 +26,38 @@ export function offers(){
     // remove any <p> in the text details
     el.querySelectorAll('.o-offer__text__collapsible > p').forEach(el => el.remove());
 
+
   });
 
   /*  Individual cards */
   function updateCards() {
 
+    const atomicSaloon = document.querySelector('.mod-offers-listing--item a[href="/offers/atomic-offer.html"]').parentElement;
     const upTo30 = document.querySelector('.mod-offers-listing--item a[href="/offers/advance-purchase-offer.html"]').parentElement;
     const exclusiveOnline = document.querySelector('.mod-offers-listing--item a[href="/offers/up-to-20-off-offer.html"]').parentElement;
     const mostPopular = document.querySelector('.mod-offers-listing--item a[href="/offers/featured-offer.html"]').parentElement;
     const f1Heineken = document.querySelector('.mod-offers-listing--item a[href="/offers/f1-ticket-package-offer.html"]').parentElement;
     const raceSuite = document.querySelector('.mod-offers-listing--item a[href="/offers/f1-suite-offer.html"]').parentElement;
     const racetrackView = document.querySelector('.mod-offers-listing--item a[href="/offers/f1-racetrack-view-suites-offer.html"]').parentElement;
-    const book3nights = document.querySelector('.mod-offers-listing--item a[href="/offers/the-big-game-2024-offer.html"]').parentElement;
+    const bigGame = document.querySelector('.mod-offers-listing--item a[href="/offers/the-big-game-2024-offer.html"]').parentElement;
 
+
+
+
+    // Atomic Saloon
+    (() => {
+      atomicSaloon.querySelector('.o-offer__tagline').innerText = 'Atomic Saloon Show & Suites Package';
+      atomicSaloon.querySelector('.o-offer__tag-detail').innerText = 'Enjoy up to 25% off suites & up to a $70 ticket discount on select seats';
+
+      const stayDates = '7/5/2023 – 11/1/2023';
+      const bookBefore = '10/30/2023';
+      const offerDetails = 'Join Grazie® Rewards for up to an additional 5% off. $70 per ticket discount on select Atomic Saloon Show seating. Eligible seat categories include Reactor VIP Reserve and Rodeo Active Reserve. A link to an exclusive booking webpage will be provided to access the discounted tickets via confirmation e-mail after booking a stay. Cancellable / Refundable. Two-night minimum length of stay required.';
+      atomicSaloon.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
+
+      // tag the card
+      atomicSaloon.setAttribute("data-offer", 'event');
+
+    })();
 
     
     // upTo30
@@ -49,6 +69,9 @@ export function offers(){
       const bookBefore = 'At least 60 days in advance';
       const offerDetails = 'Join Grazie® Rewards for up to an additional 5% off. Must book at least 60 days in advance. Non-Cancellable / Non-Refundable. Full pre-payment of stay required.';
       upTo30.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
+
+      // tag the card
+      upTo30.setAttribute("data-offer", 'hotel');
 
       // change image
       upTo30.querySelectorAll('source, img').forEach(function(el){
@@ -67,6 +90,10 @@ export function offers(){
       const bookBefore = '12/31/2023';
       const offerDetails = 'Join Grazie® Rewards for up to an additional 5% off. No nightly minimum stay.';
       exclusiveOnline.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
+
+      // tag the card
+      exclusiveOnline.setAttribute("data-offer", 'hotel');
+
     })();
 
     // mostPopular
@@ -79,6 +106,9 @@ export function offers(){
           <div class="o-offer__text__details__item"><span class="bold">Offer Details:</span> Free Cancellations. Fully Refundable. Flexible 24-hour cancellation policy. No nightly minimum stay. Available at The Venetian and The Palazzo.</div>
         </div>
       `;
+
+      // tag the card
+      mostPopular.setAttribute("data-offer", 'hotel');
 
       // change image
       mostPopular.querySelectorAll('source, img').forEach(function(el){
@@ -96,6 +126,10 @@ export function offers(){
       const bookBefore = 'Valid until 11/15/23 or sold out';
       const offerDetails = 'Grandstand tickets include food & non-alcoholic beverages each day. Tickets are non-transferable. After purchase, you will be contacted with additional details regarding your reservation. Three-night minimum length of stay required. Fully prepaid, non-refundable and non-cancellable.';
       f1Heineken.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
+
+      // tag the card
+      f1Heineken.setAttribute("data-offer", 'event');
+
     })();
 
     // raceSuite
@@ -106,6 +140,10 @@ export function offers(){
       const bookBefore = 'Valid until 11/15/23 or sold out';
       const offerDetails = 'Grandstand tickets include food & non-alcoholic beverages each day. Tickets are non-transferable. After purchase, you will be contacted with additional details regarding your reservation. Three-night minimum length of stay required. Fully prepaid, non-refundable and non-cancellable.';
       raceSuite.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
+
+      // tag the card
+      raceSuite.setAttribute("data-offer", 'event');
+
     })();
 
     // racetrackView
@@ -116,17 +154,25 @@ export function offers(){
       const bookBefore = 'Valid Until 11/15/23 or sold out';
       const offerDetails = 'Three-night minimum length of stay. Fully prepaid, non-refundable and non-cancellable.';
       racetrackView.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
+
+      // tag the card
+      racetrackView.setAttribute("data-offer", 'event');
+
     })();
 
-    // book3nights
+    // bigGame
     (() => {
-      book3nights.querySelector('.o-offer__tagline').innerText = 'The Big Game 2024 Offer';
-      book3nights.querySelector('.o-offer__tag-detail').innerText = 'Get in on all the football action this February';
+      bigGame.querySelector('.o-offer__tagline').innerText = 'The Big Game 2024 Offer';
+      bigGame.querySelector('.o-offer__tag-detail').innerText = 'Get in on all the football action this February';
 
       const stayDates = '2/4/2024 – 2/16/2024';
       const bookBefore = '2/8/2024';
       const offerDetails = 'Experience the excitement of the Big Game when it arrives in Las Vegas in 2024. Three-night minimum length of stay. Fully prepaid, non-refundable and non-cancellable. Available at The Venetian and The Palazzo.';
-      book3nights.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
+      bigGame.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
+
+      // tag the card
+      bigGame.setAttribute("data-offer", 'event');
+
     })();
 
 

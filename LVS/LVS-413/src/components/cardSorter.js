@@ -3,10 +3,11 @@ import { qs, qsa } from "../utils/qs";
 export function cardSorter(){
 
   // tag the cards
-  const cards = qsa('.mod-offers-listing .o-offer');
-  for (var i=0; i<cards.length; i++) {
-    cards[i].setAttribute("data-offer", OTYPE[i]);
-  }
+  // const cards = qsa('.mod-offers-listing .o-offer');
+  // for (var i=0; i<cards.length; i++) {
+  //   cards[i].setAttribute("data-offer", OTYPE[i]);
+  // }
+
 
   // add divs for offer type
   qs('.mod-offers-listing--group').insertAdjacentHTML('afterbegin', `
@@ -37,6 +38,9 @@ export function cardSorter(){
       jQuery(el).appendTo('.mod-offers-listing--group--event');
     }
   });
+
+  // move Atomic Saloon position to before The Big Game
+  $(document.querySelector('.mod-offers-listing--item a[href="/offers/atomic-offer.html"]').parentElement).insertBefore(document.querySelector('.mod-offers-listing--item > a[href="/offers/the-big-game-2024-offer.html"]').parentElement)
 
 
   // toggle click even to scroll down page
