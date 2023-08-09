@@ -1,0 +1,102 @@
+@mixin xl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 980px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+.mod-offers-listing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  &__featured {
+    margin-bottom: 60px;
+    &__header {
+      margin-bottom: 25px;
+      font-size: 38px;
+      font-weight: 300;
+      font-family: Avenir, sans-serif;
+    }
+    &--wrap {
+      display: flex;
+    }
+    &__media {
+      flex: unset;
+      width: 52%;
+      & figure {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    & .o-offer {
+      &__text {
+        flex: unset;
+        width: 48%;
+        & .mod-offers-listing__buttons {
+          display: flex;
+          padding-top: 25px;
+          list-style: none;
+          align-items: center;
+          & li:nth-of-type(1) {
+            width: 50%;
+            margin-right: 20px;
+          }
+          & li:nth-of-type(2) {
+            width: 50%;
+            white-space: nowrap;
+            & a {
+              padding: 18px 14px;
+              & span {
+                color: #db2000;
+                text-decoration: underline;
+              }
+              & svg {
+                color: #db2000;
+              }
+            }
+          }
+        }
+      }
+      &__tagline {
+        font-size: 40px;
+        font-family: Avenir, sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        line-height: 1;
+        & a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+      &__divider {
+        width: 150px;
+        height: 5px;
+        display: inline-block;
+        background: #db2000;
+        margin-bottom: 15px;
+      }
+      &__text__details {
+        line-height: 2;
+        &__item {
+          font-size: 15px;
+          & .bold {
+            font-weight: 900;
+            font-size: calc(100% + 1px);
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

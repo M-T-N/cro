@@ -1,8 +1,5 @@
 import { qs, qsa } from "../utils/qs";
 
-
-const dropDown = qs()
-
 export function bottomDetails(){
 
   // move the dropdown and FAQ into the T&C's section below
