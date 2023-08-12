@@ -14,6 +14,8 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 function init() {
 
+  console.log('LVS-422');
+
   css();
 
   pageAssemble();

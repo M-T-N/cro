@@ -45,12 +45,9 @@ export function stickyHighlights() {
             </div>
             <div class="sticky-highlights__booking__contact__host">
               <div class="sticky-highlights__booking__contact__host__header">
-                <h5>Contact Guest Services:</h5>
+                <h5>Contact Grazie Services:</h5>
               </div>
               <div class="sticky-highlights__booking__contact__host__info">
-                <div class="sticky-highlights__booking__contact__host__info__name">
-                  <h5>${variable.contactInfoName2}</h5>
-                </div>
                 <div class="sticky-highlights__booking__contact__host__info__number">
                   <h5>${variable.contactInfoNumber2}</h5>
                 </div>

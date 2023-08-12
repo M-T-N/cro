@@ -20,6 +20,7 @@
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  /* Featured */
   &__featured {
     margin-bottom: 60px;
     &__header {
@@ -94,6 +95,93 @@
             font-weight: 900;
             font-size: calc(100% + 1px);
             margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  &--group {
+    /*main cards*/
+    max-width: 1280px;
+    &-wrapper {
+      background-color: #f9f7f5;
+      padding: 0 32px;
+      margin: 0;
+      max-width: unset;
+      display: flex;
+      justify-content: center;
+    }
+    &__toggle {
+      overflow: unset;
+      &.active span {
+        height: auto
+      }
+    }
+    &__category {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 25px;
+      & .mod-offers-listing--item {
+        background-color: #f9f7f5;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100% !important;
+        //height: calc(100% - 70px);
+        margin: 0 !important;
+        display: flex;
+        &>a {
+          width: 95%;
+          display: inline-block;
+          position: relative;
+          & figure {
+            z-index: 20;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 55px;
+            height: 90%;
+            bottom: 0;
+            left: -45px;
+            background-color: white;
+            z-index: 10;
+          }
+        }
+        & .o-offer {
+          &__text {
+            width: 95%;
+            padding: 26px 20px 17px 5%;
+            align-self: flex-start;
+            transform: translateY(-70px);
+            z-index: 30;
+            justify-content: space-between;
+            height: calc(100% + 60px);
+            flex-grow: 1;
+            &__collapsible {
+              border-top: none;
+            }
+            & .mod-offers-listing__buttons {
+              & .cta--arrow {
+                width: unset;
+                margin-right: 30px;
+              }
+              & .o-offer__cta {
+                width: unset;
+                margin: 0;
+                & svg {
+                  display: none;
+                }
+              }
+            }
+          }
+          &__divider {
+            &--mobile {
+              display: none;
+            }
+            &--desktop {
+              display: inline-block;
+            }
           }
         }
       }

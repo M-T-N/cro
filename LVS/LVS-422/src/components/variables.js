@@ -4,8 +4,10 @@ export const dates = qs('.offers-intro__header--dates h4').innerText;
 export const expireDate = qs('.offers_grid-item_expiry').innerText;
 export const saveButton = qs('.offers-intro__header--save').outerHTML;
 
-export const introHeader = qs('.offers-intro__contents h1').innerText;
-export const introCopy = qs('.offers-intro__contents-body p').innerHTML;
+export const introHeader = qs('.offers-intro__contents-body p:nth-child(1)').innerHTML;
+export const introCopy = qs('.offers-intro__contents-body p:nth-child(2)').innerHTML;
+
+export const complimentaryNights = qs('.offer-details__inclusions-list_item div:nth-child(1) b').innerText;
 
 export const columnOffers = qs('.offer-details__flexible').innerHTML;
 

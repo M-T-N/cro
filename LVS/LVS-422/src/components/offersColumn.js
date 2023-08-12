@@ -22,7 +22,10 @@ export function offersColumn(){
         </div>
       </div>
       <div class="offers-column__header__expire">
-        <p>${variable.expireDate}</p>
+        <p>${variable.expireDate.replaceAll(/\S*/g, word => {
+              return word.slice(0, 1) + word.slice(1).toLowerCase();
+            })}
+        </p>
       </div>
       <div class="offers-column__header__save">
         ${variable.saveButton}

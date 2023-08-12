@@ -38,7 +38,16 @@
           height: 100%;
         }
         &__title {
-          margin-bottom: 30px;
+          margin-bottom: 5px;
+        }
+        &__nights {
+          margin-bottom: 35px;
+          & p {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1;
+          }
+          ;
         }
         &__cta {
           margin-bottom: 0px;
@@ -137,10 +146,42 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 // desktop
 @include lg {
   .flexible-detail-page {
     & .offers-details-v2 {
+      // hero 
+      .offer-details__fixed {
+        .offers-hero {
+          row-gap: 0;
+          padding: 50px 0 60px;
+          &__title {
+            margin-bottom: 5px;
+          }
+          &__nights {
+            margin-bottom: 50px;
+            & p {
+              color: #fff;
+              font-family: Avenir;
+              font-size: 25px;
+              line-height: 1;
+            }
+          }
+          &__cta {
+            margin-top: 0;
+          }
+        }
+      }
       // main content
       & .offer-details__flexible {
         padding: 0px 30px;
@@ -152,14 +193,14 @@
             align-items: flex-start;
             &__calendar {
               flex-direction: row;
-              transform: translateX(-45px);
               margin-bottom: 0px;
               & .calendar-icon {
-                margin: 0 20px 0 0;
+                margin: 0 14px 0 0;
               }
             }
             &__expire {
               margin-bottom: 40px;
+              transform: translateX(40px);
             }
             &__details {
               display: none;
@@ -169,8 +210,20 @@
             }
             &__intro {
               &__header {
+                margin-bottom: 15px;
                 h3 {
                   font-size: 34px;
+                  & b {
+                    line-height: 1;
+                  }
+                }
+              }
+              &__copy {
+                border-bottom: 1px solid #d8dee1;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                & p {
+                  line-height: 1.4;
                 }
               }
             }
@@ -195,6 +248,7 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
+              margin-bottom: 15px;
               & h4 {
                 font-size: 18px;
                 text-transform: none;
@@ -202,7 +256,7 @@
               }
             }
             &__details {
-              margin-bottom: 20px;
+              margin-bottom: 25px;
               & ul {
                 list-style: none;
                 & li {
@@ -218,10 +272,20 @@
               &__button-clone {
                 display: flex;
                 justify-content: center;
+                margin-bottom: 40px;
+                & a {
+                  margin-bottom: 0;
+                }
               }
               &__divider {
                 display: flex;
                 justify-content: center;
+                border-top: 1px solid #d8dee1;
+                & span {
+                  transform: translateY(-13px);
+                  background: #fff;
+                  padding: 0 15px;
+                }
               }
               &__contact {
                 &__host {
