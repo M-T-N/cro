@@ -5,7 +5,7 @@ import { pageAssemble } from './components/pageAssemble';
 
 function init() {
 
-    console.log('test number');
+    console.log('LVS-422');
 
     css();
   
@@ -13,4 +13,4 @@ function init() {
 
 }
 
-poll('selector', init);
+poll('.offer-details__terms-and-conditions', init);
