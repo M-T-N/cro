@@ -29,6 +29,9 @@
 .collection-links .base-lockup__heading {
   font-size: 18px;
 }
+.collection-links__container {
+	margin-bottom: 45px;
+}
 .collection-links__link-list {
   margin-top: 0px;
 }
