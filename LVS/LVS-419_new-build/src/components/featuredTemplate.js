@@ -19,7 +19,7 @@ export function featuredTemplate(image, offerLink, tagline, stayDates, bookBefor
       <span class="o-offer__divider"></span>
       <div class="o-offer__text__details">
           <div class="o-offer__text__details__item"><span class="bold">Stay Dates:</span> ${stayDates}</div>
-          <div class="o-offer__text__details__item"><span class="bold">Must Book Before:</span> ${bookBefore}</div>
+          <div class="o-offer__text__details__item">${bookBefore}</div>
           <div class="o-offer__text__details__item"><span class="bold">Offer Details:</span> ${offerDetails}</div>
       </div>
       <ul class="mod-offers-listing__buttons">

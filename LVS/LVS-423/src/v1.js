@@ -6,25 +6,25 @@ import { css } from './components/css';
 import { pageAssemble } from './components/pageAssemble';
 
 
+
 // Polyfills
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
-console.log('VEN-419_v1 Preload...');
 
 function init() {
 
-	console.log('VEN-419 Desktop v1');
+	console.log('LVS-423_v1 Desktop');
 
-  // css
+  // inject css
   css();
 
-  // page assemble
-  pageAssemble();
-  
+	// assemble
+	pageAssemble();
+
 }
 
 
 // Initialize experiment
-poll('.dashboard-news', init);
+poll('.globalfooter', init);

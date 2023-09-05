@@ -22,6 +22,12 @@
   height: 170px;
   z-index: 10;
 }
+.carousel-quote {
+	margin-bottom: 50px;
+}
+.feature-text {
+	margin-bottom: 50px;
+}
 .collection-links {
   padding: 0;
   margin-bottom: 25px;
