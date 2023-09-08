@@ -17,6 +17,7 @@
 
 
 
+
 //  Marriott Poll
 (function(){
   
@@ -172,6 +173,7 @@ convert._$('#pageVersion').attr('value', 'T36.1');  /*  <---   T'testNumber'.'ve
 // manually add cookie
 document.cookie = 'tin_test=true; expires=Fri, 04 Jul 2025 08:00:00 GMT; path=/;';
 document.cookie = 'optly_venetian_test=true; expires=Fri, 04 Jul 2025 08:00:00 GMT; path=/;';
+document.cookie = `optly_venetian_test=true; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`;
 
 
 

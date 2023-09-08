@@ -39,7 +39,7 @@ export function offerFetch(){
 
       // place html based on index of cards
 
-      console.log(el, index);
+      //console.log(el, index);
 
       if (index == 0) {
         // featured

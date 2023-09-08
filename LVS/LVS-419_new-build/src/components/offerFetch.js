@@ -39,11 +39,11 @@ export function offerFetch(){
 
       // place html based on index of cards
 
-      console.log(el, index);
+      //console.log(el, index);
 
       if (index == 0) {
         // featured
-        qs('.mod-offers-listing__featured').insertAdjacentHTML('beforeend', featuredTemplate(image, offerLink, tagline, stayDates, bookBefore, offerDetails));
+        qs('.mod-offers-listing__featured--wrap').outerHTML = featuredTemplate(image, offerLink, tagline, stayDates, bookBefore, offerDetails);
       } else {
         // offers
         qs('.mod-offers-listing--group__category').insertAdjacentHTML('beforeend', offersTemplate(image, offerLink, tagline, stayDates, bookBefore, offerDetails));

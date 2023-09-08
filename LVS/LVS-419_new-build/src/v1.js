@@ -27,4 +27,4 @@ function init() {
 
 
 // Initialize experiment
-poll('.dashboard-news', init);
+poll('.dashboard-offers__carousel .glide__bullets .glide__bullet--active', init);

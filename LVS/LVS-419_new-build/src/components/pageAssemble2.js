@@ -3,7 +3,7 @@ import { offerFetch } from "./offerFetch2";
 import { buildWrappers } from "./buildWrappers";
 
 
-export function pageAssemble(){
+export function pageAssemble2(){
 
   // setup containers for new offer layouts
   buildWrappers();

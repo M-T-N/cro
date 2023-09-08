@@ -20,8 +20,19 @@ function init() {
   // inject css
   css2();
 
-	// page assemble
-	pageAssemble2();
+	// wrap in poll funciton for jquery
+	function pollJquery() {
+		setTimeout(function(){
+			if (window.jQuery) {
+					// ASSEMBLE!
+					pageAssemble2();
+			} else {
+				pollJquery()
+			}
+		}, 50);
+	}
+	// fire it
+	pollJquery();
 
 }
 
