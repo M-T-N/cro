@@ -154,6 +154,7 @@
                     }
                   }
                   &__info {
+										text-align: center;
                     & h5,
                     a {
                       color: #2c2c2c;
@@ -345,6 +346,9 @@
                   margin-bottom: 40px;
                   & a {
                     margin-bottom: 0;
+										&:hover {
+											color: #fff;
+										}
                   }
                 }
                 &__divider {
@@ -358,9 +362,12 @@
                   }
                 }
                 &__contact {
+									display: flex;
+									flex-direction: column;
+									gap: 15px;
                   &__host {
                     display: grid;
-                    grid-template-columns: 2fr 1fr;
+                    grid-template-columns: 2fr 1.5fr;
                     & h5 {
                       font-family: Avenir, sans-serif;
                     }
@@ -370,6 +377,7 @@
                       }
                     }
                     &__info {
+											text-align: left;
                       & h5,
                       a {
                         color: #2c2c2c;

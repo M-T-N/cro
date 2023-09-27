@@ -24,10 +24,10 @@
 				productObj.color = 'Dark Olive'
 				break;
 			case includesProduct('/faux-suede-skirt'):
-				if (thisHref.includes('kfrick_ig3')) {
+				if (thisHref.includes('kfrick_ig3') || thisHref.includes('Frickspicks')) {
 					productObj.imgSrc = defaultImg;
 				}
-				if (thisHref.includes('scookchazen_ig3')) {
+				if (thisHref.includes('scookchazen_ig3') || thisHref.includes('SabrinaCookChazen')) {
 					productObj.imgSrc = defaultImg;
 				}
 				break;
@@ -40,7 +40,7 @@
 					productObj.imgSrc = defaultImg;
 					productObj.color = 'Cinnamon'
 				}
-				if (thisHref.includes('shamilton_ig12')) {
+				if (thisHref.includes('shamilton_ig12') || thisHref.includes('Makeupobsessedmom')) {
 					productObj.imgSrc = defaultImg;
 					productObj.color = 'Olive'
 				}

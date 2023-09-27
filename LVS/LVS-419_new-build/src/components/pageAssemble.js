@@ -6,10 +6,10 @@ import { offerPreload } from "./offerPreload";
 export function pageAssemble(){
 
   // setup containers for new offer layouts
-  buildWrappers();
+  //buildWrappers();
 
 	// preload the featured template
-	offerPreload();
+	//offerPreload();
 
   // fetch the offer and put them on the page
   offerFetch();

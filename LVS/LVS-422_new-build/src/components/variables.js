@@ -13,5 +13,5 @@ export const columnOffers = qs('.offer-details__flexible').innerHTML;
 
 export const contactInfoName1 = qs('.offer-contact__data--0 div:nth-child(1)').innerText;
 export const contactInfoNumber1 = qs('.offer-contact__data--0 div:nth-child(2) a').outerHTML;
-export const contactInfoName2 = qs('.offer-contact__data--2 div:nth-child(1)').innerText;
-export const contactInfoNumber2 = qs('.offer-contact__data--2 div:nth-child(2) a').outerHTML;
+// export const contactInfoName2 = qs('.offer-contact__data--2 div:nth-child(1)').innerText;
+// export const contactInfoNumber2 = qs('.offer-contact__data--2 div:nth-child(2) a').outerHTML;

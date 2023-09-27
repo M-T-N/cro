@@ -28,7 +28,7 @@
     			width: 100%;
 				}
 				.hero-primary__lockup-container .collection-links__link-list-item_header {
-					margin-bottom: 3px;
+					margin-bottom: 6px;
 				}
 				.hero-primary__lockup-container .collection-links__link-list-item_header h4 {
 					font-size: 20px;
@@ -36,6 +36,7 @@
 				}
 				.hero-primary__lockup-container .collection-links__link-list-item_apply > span {
 					margin-right: 5px;
+					font-size: 14px;
 				}
 				.hero-primary__lockup-container .collection-links__link-list-item_apply .collection-links__link-list-item_apply__icon {
 					position: static;

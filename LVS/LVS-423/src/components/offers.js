@@ -86,8 +86,8 @@ export function offers(){
       exclusiveOnline.querySelector('.o-offer__tagline').innerText = 'Exclusive Online Savings';
       exclusiveOnline.querySelector('.o-offer__tag-detail').innerText = 'Up to 20% off with no nightly minimum stay';
 
-      const stayDates = 'Through 12/31/2023';
-      const bookBefore = '12/31/2023';
+      const stayDates = 'Through 12/31/2024';
+      const bookBefore = '12/31/2024';
       const offerDetails = 'Join Grazie® Rewards for up to an additional 5% off. No nightly minimum stay.';
       exclusiveOnline.querySelector('.o-offer__text__collapsible > ul').outerHTML = stayDateTemplate(stayDates, bookBefore, offerDetails);
 
